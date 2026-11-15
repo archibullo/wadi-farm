@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#28654b">
+  <link rel="manifest" href="./manifest.json"><link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="/assets/wadi_farm/logo.svg" type="image/svg+xml">
+  <title>وادي فارم — السجل الميداني</title>
+</head>
+<body>
+  <header><div class="head"><h1>🌱 وادي فارم</h1><span>السجل الميداني · وضع دون إنترنت</span></div><div id="connection" class="connection">جاري الفحص...</div></header>
+  <main>
+    <section class="notice"><strong>إصدار تجريبي:</strong> تسجّل هذه الواجهة ملاحظات وعمليات ميدانية أولية فقط؛ ولا تنفذ صرف مخزون أو أوامر ري أو تشغيل أجهزة أو قيودًا مالية. يلزم فتح التطبيق وتسجيل الدخول مرة واحدة أثناء الاتصال قبل استخدامه دون إنترنت.</section>
+    <section class="card">
+      <h2>تسجيل عملية جديدة</h2>
+      <form id="field-form">
+        <label>المزرعة <select id="farm" required><option value="">اختر المزرعة</option></select></label>
+        <label>القطعة / الحقل <select id="field"><option value="">بدون حقل محدد</option></select></label>
+        <label>نوع العملية <select id="activity" required><option value="Observation">معاينة / ملاحظة</option><option value="Irrigation">ري</option><option value="Feeding">تغذية</option><option value="Equipment">تشغيل معدة</option><option value="Maintenance">صيانة</option><option value="Harvest">حصاد</option><option value="Safety">سلامة</option><option value="Other">أخرى</option></select></label>
+        <div class="cols"><label>الكمية (اختياري) <input id="quantity" type="number" min="0" step="any" placeholder="0"></label><label>الوحدة <input id="unit" maxlength="40" placeholder="م³ / كجم / ساعة"></label></div>
+        <label>الملاحظات <textarea id="notes" maxlength="1000" rows="4" placeholder="تفاصيل العملية أو المشاهدة"></textarea></label>
+        <button type="submit">حفظ العملية على الجهاز</button>
+      </form>
+      <div id="message" role="status" aria-live="polite"></div>
+    </section>
+    <section class="card">
+      <div class="heading"><h2>سجل المزامنة</h2><span id="pending-badge">0 قيد الإرسال</span></div>
+      <button type="button" id="sync">مزامنة السجلات الآن</button> <button type="button" id="clear-local" class="subtle">مسح السجلات المحلية بعد التحقق</button>
+      <p class="small">لا تُحذف السجلات المحفوظة تلقائيًا. الطلب المكرر لا يخلق معاملة أخرى في السيرفر. التعارضات تتطلب مراجعة.</p>
+      <div id="records"></div>
+    </section>
+  </main>
+  <script src="./app.js" defer></script>
+</body>
+</html>

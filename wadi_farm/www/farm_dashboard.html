@@ -1,0 +1,24 @@
+{% extends "templates/web.html" %}
+{% block page_content %}
+<section class="wf-dashboard" dir="rtl" lang="ar">
+  <header class="wf-head">
+    <h1>🌱 إدارة مزرعة وادي النقرة</h1>
+    <p>الحقول والمحاصيل والري والثروة الحيوانية والطيور والأسماك والصوب والمعدات في مكان واحد</p>
+    <a class="wf-mobile" href="/assets/wadi_farm/mobile/index.html">فتح سجل العمليات الميداني دون اتصال</a>
+  </header>
+  <p class="wf-note">الإصدار v0.4-alpha: نماذج تسجيل أولية واختبارات محدودة. لا توجد أوامر تشغيل أجهزة أو ترحيل مخزون تلقائي في هذا الإصدار.</p>
+  <div class="wf-sections">
+  {% for group in groups %}
+    <div class="wf-group">
+      <h2>{{ group.title }}</h2>
+      <ul>
+      {% for model in group.models %}
+        <li><a href="/app/{{ model.slug }}">{{ model.name }}</a></li>
+      {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+  </div>
+</section>
+<link rel="stylesheet" href="/assets/wadi_farm/dashboard.css">
+{% endblock %}

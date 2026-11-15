@@ -1,0 +1,17 @@
+{
+  "name": "Wadi Farm Field Log",
+  "short_name": "Wadi Farm",
+  "start_url": "/assets/wadi_farm/mobile/index.html",
+  "scope": "/assets/wadi_farm/mobile/",
+  "display": "standalone",
+  "background_color": "#f3f6f3",
+  "theme_color": "#28654b",
+  "icons": [
+    {
+      "src": "/assets/wadi_farm/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
