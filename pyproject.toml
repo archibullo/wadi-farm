@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=70"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wadi_farm"
+version = "0.4.0a0"
+description = "Integrated farm operations extension for ERPNext v16"
+readme = "README.md"
+requires-python = ">=3.14"
+license = "MIT"
+authors = [{ name = "Wadi Farm" }]
+dependencies = []
+
+[tool.setuptools.packages.find]
+include = ["wadi_farm*"]
+
+[tool.setuptools.package-data]
+wadi_farm = ["**/*.json", "**/*.csv", "**/*.html", "**/*.js", "**/*.css", "**/*.svg", "modules.txt", "patches.txt"]

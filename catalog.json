@@ -1,0 +1,130 @@
+{
+  "version": "0.4.0a0",
+  "doctype_count": 100,
+  "categories": {
+    "Land": [
+      "WFM Farm",
+      "WFM Farm Zone",
+      "WFM Field",
+      "WFM Geo Revision",
+      "WFM Facility",
+      "WFM Soil Test"
+    ],
+    "Crop": [
+      "WFM Crop Variety",
+      "WFM Crop Season",
+      "WFM Crop Operation",
+      "WFM Crop Scouting",
+      "WFM Harvest Lot"
+    ],
+    "Water": [
+      "WFM Water Source",
+      "WFM Water Tank",
+      "WFM Irrigation Network",
+      "WFM Irrigation Component",
+      "WFM Irrigation Sector",
+      "WFM Irrigation Event",
+      "WFM Water Meter Reading",
+      "WFM Water Balance"
+    ],
+    "Livestock": [
+      "WFM Animal Group",
+      "WFM Animal",
+      "WFM Animal Movement",
+      "WFM Animal Weight",
+      "WFM Animal Breeding",
+      "WFM Animal Birth",
+      "WFM Animal Health",
+      "WFM Animal Feeding",
+      "WFM Milk Yield"
+    ],
+    "Poultry": [
+      "WFM Bird Species",
+      "WFM Bird Breed",
+      "WFM Bird House",
+      "WFM Bird Flock",
+      "WFM Bird",
+      "WFM Bird Pair",
+      "WFM Bird Nest",
+      "WFM Bird Clutch",
+      "WFM Bird Incubation",
+      "WFM Egg Collection",
+      "WFM Bird Feed Event",
+      "WFM Bird Weight",
+      "WFM Bird Health",
+      "WFM Bird Mortality",
+      "WFM Bird Transfer",
+      "WFM Bird Environment",
+      "WFM Bird Production",
+      "WFM Bird Harvest"
+    ],
+    "Aquaculture": [
+      "WFM Aquaculture Unit",
+      "WFM Fish Pond",
+      "WFM Fish Species",
+      "WFM Fish Cycle",
+      "WFM Fish Stocking",
+      "WFM Fish Feeding",
+      "WFM Fish Weight",
+      "WFM Fish Mortality",
+      "WFM Fish Health",
+      "WFM Pond Water Quality",
+      "WFM Fish Transfer",
+      "WFM Fish Harvest"
+    ],
+    "Greenhouse": [
+      "WFM Greenhouse",
+      "WFM Greenhouse Zone",
+      "WFM Climate Recipe",
+      "WFM Climate Reading",
+      "WFM Greenhouse Cycle",
+      "WFM Greenhouse Inspection",
+      "WFM Climate Target",
+      "WFM Fertigation Plan"
+    ],
+    "Machinery": [
+      "WFM Machinery Profile",
+      "WFM Machine Usage",
+      "WFM Fuel Issue",
+      "WFM Maintenance Request",
+      "WFM Maintenance Work Order",
+      "WFM Calibration",
+      "WFM Energy Source",
+      "WFM Energy Reading"
+    ],
+    "Processing": [
+      "WFM Drying Batch",
+      "WFM Quality Check",
+      "WFM Packaging Batch"
+    ],
+    "Operations": [
+      "WFM Work Order",
+      "WFM Field Log",
+      "WFM Supervisor Visit",
+      "WFM Cost Allocation",
+      "WFM Operation Cost Object",
+      "WFM User Farm Access"
+    ],
+    "Integrations": [
+      "WFM Integration Source",
+      "WFM Device",
+      "WFM Device Channel",
+      "WFM Telemetry Observation",
+      "WFM Device Command",
+      "WFM Weather Observation",
+      "WFM Satellite Scene",
+      "WFM Raster Layer"
+    ],
+    "Compliance": [
+      "WFM Risk Register",
+      "WFM Emergency Incident",
+      "WFM Insurance Policy",
+      "WFM Insurance Claim",
+      "WFM Waste Transfer",
+      "WFM Visitor Log",
+      "WFM SOP",
+      "WFM Traceability Case",
+      "WFM Recall Action"
+    ]
+  }
+}
