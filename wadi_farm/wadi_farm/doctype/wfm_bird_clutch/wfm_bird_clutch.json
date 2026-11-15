@@ -1,0 +1,140 @@
+{
+  "actions": [],
+  "allow_import": 1,
+  "autoname": "hash",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "company",
+    "farm",
+    "status",
+    "pair",
+    "nest",
+    "laying_date",
+    "egg_count",
+    "fertile_count",
+    "hatched_count",
+    "live_chicks",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "company",
+      "fieldtype": "Link",
+      "label": "Company",
+      "reqd": 1,
+      "options": "Company",
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "farm",
+      "fieldtype": "Link",
+      "label": "Farm",
+      "reqd": 1,
+      "options": "WFM Farm",
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "default": "Active",
+      "options": "Draft\nActive\nPaused\nCompleted\nClosed\nCancelled",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "pair",
+      "fieldtype": "Link",
+      "label": "Pair",
+      "options": "WFM Bird Pair"
+    },
+    {
+      "fieldname": "nest",
+      "fieldtype": "Link",
+      "label": "Nest",
+      "options": "WFM Bird Nest"
+    },
+    {
+      "fieldname": "laying_date",
+      "fieldtype": "Date",
+      "label": "Laying Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "egg_count",
+      "fieldtype": "Int",
+      "label": "Egg Count",
+      "reqd": 1
+    },
+    {
+      "fieldname": "fertile_count",
+      "fieldtype": "Int",
+      "label": "Fertile Count"
+    },
+    {
+      "fieldname": "hatched_count",
+      "fieldtype": "Int",
+      "label": "Hatched Count"
+    },
+    {
+      "fieldname": "live_chicks",
+      "fieldtype": "Int",
+      "label": "Live Chicks"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Notes"
+    }
+  ],
+  "is_submittable": 0,
+  "module": "Wadi Farm",
+  "name": "WFM Bird Clutch",
+  "naming_rule": "Random",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1,
+      "export": 1,
+      "import": 1
+    },
+    {
+      "role": "Farm Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "Farm Auditor",
+      "read": 1,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "Farm Veterinarian",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1
+    },
+    {
+      "role": "Farm Supervisor",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1,
+  "links": [],
+  "title_field": "nest",
+  "quick_entry": 0,
+  "custom": 0
+}

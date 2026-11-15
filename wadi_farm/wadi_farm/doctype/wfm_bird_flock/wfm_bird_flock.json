@@ -1,0 +1,146 @@
+{
+  "actions": [],
+  "allow_import": 1,
+  "autoname": "hash",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "company",
+    "farm",
+    "status",
+    "flock_code",
+    "species",
+    "breed",
+    "house",
+    "purpose",
+    "opening_count",
+    "cycle_start",
+    "cost_center"
+  ],
+  "fields": [
+    {
+      "fieldname": "company",
+      "fieldtype": "Link",
+      "label": "Company",
+      "reqd": 1,
+      "options": "Company",
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "farm",
+      "fieldtype": "Link",
+      "label": "Farm",
+      "reqd": 1,
+      "options": "WFM Farm",
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "default": "Active",
+      "options": "Draft\nActive\nPaused\nCompleted\nClosed\nCancelled",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "flock_code",
+      "fieldtype": "Data",
+      "label": "Flock Code",
+      "reqd": 1,
+      "unique": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "species",
+      "fieldtype": "Link",
+      "label": "Species",
+      "reqd": 1,
+      "options": "WFM Bird Species"
+    },
+    {
+      "fieldname": "breed",
+      "fieldtype": "Link",
+      "label": "Breed",
+      "options": "WFM Bird Breed"
+    },
+    {
+      "fieldname": "house",
+      "fieldtype": "Link",
+      "label": "House",
+      "options": "WFM Bird House"
+    },
+    {
+      "fieldname": "purpose",
+      "fieldtype": "Select",
+      "label": "Purpose",
+      "reqd": 1,
+      "options": "Breeding\nMeat\nEggs\nGrowing\nMixed"
+    },
+    {
+      "fieldname": "opening_count",
+      "fieldtype": "Int",
+      "label": "Opening Count"
+    },
+    {
+      "fieldname": "cycle_start",
+      "fieldtype": "Date",
+      "label": "Cycle Start"
+    },
+    {
+      "fieldname": "cost_center",
+      "fieldtype": "Link",
+      "label": "Cost Center",
+      "options": "Cost Center"
+    }
+  ],
+  "is_submittable": 0,
+  "module": "Wadi Farm",
+  "name": "WFM Bird Flock",
+  "naming_rule": "Random",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1,
+      "export": 1,
+      "import": 1
+    },
+    {
+      "role": "Farm Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "Farm Auditor",
+      "read": 1,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "Farm Veterinarian",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1
+    },
+    {
+      "role": "Farm Supervisor",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1,
+  "links": [],
+  "title_field": "flock_code",
+  "quick_entry": 0,
+  "custom": 0
+}
