@@ -1,0 +1,122 @@
+{
+  "actions": [],
+  "allow_import": 1,
+  "autoname": "hash",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "company",
+    "farm",
+    "status",
+    "source",
+    "sector",
+    "observed_at",
+    "cumulative_m3",
+    "reading_source"
+  ],
+  "fields": [
+    {
+      "fieldname": "company",
+      "fieldtype": "Link",
+      "label": "Company",
+      "reqd": 1,
+      "options": "Company",
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "farm",
+      "fieldtype": "Link",
+      "label": "Farm",
+      "reqd": 1,
+      "options": "WFM Farm",
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "default": "Active",
+      "options": "Draft\nActive\nPaused\nCompleted\nClosed\nCancelled",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "source",
+      "fieldtype": "Link",
+      "label": "Source",
+      "options": "WFM Water Source"
+    },
+    {
+      "fieldname": "sector",
+      "fieldtype": "Link",
+      "label": "Sector",
+      "options": "WFM Irrigation Sector"
+    },
+    {
+      "fieldname": "observed_at",
+      "fieldtype": "Datetime",
+      "label": "Observed At",
+      "reqd": 1
+    },
+    {
+      "fieldname": "cumulative_m3",
+      "fieldtype": "Float",
+      "label": "Meter Total (m3)",
+      "reqd": 1
+    },
+    {
+      "fieldname": "reading_source",
+      "fieldtype": "Data",
+      "label": "Reading Source"
+    }
+  ],
+  "is_submittable": 0,
+  "module": "Wadi Farm",
+  "name": "WFM Water Meter Reading",
+  "naming_rule": "Random",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1,
+      "export": 1,
+      "import": 1
+    },
+    {
+      "role": "Farm Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "Farm Auditor",
+      "read": 1,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "Farm Technician",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1
+    },
+    {
+      "role": "Farm Supervisor",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1,
+  "links": [],
+  "title_field": "reading_source",
+  "quick_entry": 0,
+  "custom": 0
+}

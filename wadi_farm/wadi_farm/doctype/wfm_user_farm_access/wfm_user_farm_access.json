@@ -1,0 +1,76 @@
+{
+  "actions": [],
+  "allow_import": 1,
+  "autoname": "hash",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "company",
+    "farm",
+    "user",
+    "access_level",
+    "status"
+  ],
+  "fields": [
+    {
+      "fieldname": "company",
+      "fieldtype": "Link",
+      "label": "Company",
+      "options": "Company",
+      "reqd": 1
+    },
+    {
+      "fieldname": "farm",
+      "fieldtype": "Link",
+      "label": "Farm",
+      "options": "WFM Farm",
+      "reqd": 1
+    },
+    {
+      "fieldname": "user",
+      "fieldtype": "Link",
+      "label": "User",
+      "options": "User",
+      "reqd": 1
+    },
+    {
+      "fieldname": "access_level",
+      "fieldtype": "Select",
+      "label": "Access Level",
+      "options": "Operator\nSupervisor\nManager\nViewer",
+      "reqd": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Draft\nActive\nPaused\nCompleted\nClosed\nCancelled",
+      "default": "Active"
+    }
+  ],
+  "is_submittable": 0,
+  "module": "Wadi Farm",
+  "name": "WFM User Farm Access",
+  "naming_rule": "Random",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1
+    },
+    {
+      "role": "Farm Auditor",
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1,
+  "links": [],
+  "title_field": "user",
+  "quick_entry": 0,
+  "custom": 0
+}

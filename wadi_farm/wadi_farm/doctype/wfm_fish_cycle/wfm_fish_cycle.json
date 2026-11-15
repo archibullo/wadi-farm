@@ -1,0 +1,136 @@
+{
+  "actions": [],
+  "allow_import": 1,
+  "autoname": "hash",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "company",
+    "farm",
+    "status",
+    "pond",
+    "species",
+    "start_date",
+    "expected_end",
+    "initial_count",
+    "initial_biomass_kg",
+    "cost_center"
+  ],
+  "fields": [
+    {
+      "fieldname": "company",
+      "fieldtype": "Link",
+      "label": "Company",
+      "reqd": 1,
+      "options": "Company",
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "farm",
+      "fieldtype": "Link",
+      "label": "Farm",
+      "reqd": 1,
+      "options": "WFM Farm",
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "default": "Active",
+      "options": "Draft\nActive\nPaused\nCompleted\nClosed\nCancelled",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "pond",
+      "fieldtype": "Link",
+      "label": "Pond",
+      "reqd": 1,
+      "options": "WFM Fish Pond"
+    },
+    {
+      "fieldname": "species",
+      "fieldtype": "Link",
+      "label": "Species",
+      "reqd": 1,
+      "options": "WFM Fish Species"
+    },
+    {
+      "fieldname": "start_date",
+      "fieldtype": "Date",
+      "label": "Start Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "expected_end",
+      "fieldtype": "Date",
+      "label": "Expected End"
+    },
+    {
+      "fieldname": "initial_count",
+      "fieldtype": "Int",
+      "label": "Initial Count"
+    },
+    {
+      "fieldname": "initial_biomass_kg",
+      "fieldtype": "Float",
+      "label": "Initial Biomass Kg"
+    },
+    {
+      "fieldname": "cost_center",
+      "fieldtype": "Link",
+      "label": "Cost Center",
+      "options": "Cost Center"
+    }
+  ],
+  "is_submittable": 0,
+  "module": "Wadi Farm",
+  "name": "WFM Fish Cycle",
+  "naming_rule": "Random",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1,
+      "export": 1,
+      "import": 1
+    },
+    {
+      "role": "Farm Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "Farm Auditor",
+      "read": 1,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "Farm Veterinarian",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1
+    },
+    {
+      "role": "Farm Supervisor",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1,
+  "links": [],
+  "title_field": "pond",
+  "quick_entry": 0,
+  "custom": 0
+}

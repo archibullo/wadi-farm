@@ -1,0 +1,120 @@
+{
+  "actions": [],
+  "allow_import": 1,
+  "autoname": "hash",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "company",
+    "farm",
+    "status",
+    "visitor_name",
+    "organization",
+    "arrival_at",
+    "departure_at",
+    "visit_purpose",
+    "host",
+    "biosecurity_briefed"
+  ],
+  "fields": [
+    {
+      "fieldname": "company",
+      "fieldtype": "Link",
+      "label": "Company",
+      "reqd": 1,
+      "options": "Company",
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "farm",
+      "fieldtype": "Link",
+      "label": "Farm",
+      "reqd": 1,
+      "options": "WFM Farm",
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "default": "Active",
+      "options": "Draft\nActive\nPaused\nCompleted\nClosed\nCancelled",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "visitor_name",
+      "fieldtype": "Data",
+      "label": "Visitor Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "organization",
+      "fieldtype": "Data",
+      "label": "Organization"
+    },
+    {
+      "fieldname": "arrival_at",
+      "fieldtype": "Datetime",
+      "label": "Arrival At",
+      "reqd": 1
+    },
+    {
+      "fieldname": "departure_at",
+      "fieldtype": "Datetime",
+      "label": "Departure At"
+    },
+    {
+      "fieldname": "visit_purpose",
+      "fieldtype": "Data",
+      "label": "Visit Purpose"
+    },
+    {
+      "fieldname": "host",
+      "fieldtype": "Link",
+      "label": "Host",
+      "options": "User"
+    },
+    {
+      "fieldname": "biosecurity_briefed",
+      "fieldtype": "Check",
+      "label": "Biosecurity Briefed",
+      "default": "0"
+    }
+  ],
+  "is_submittable": 0,
+  "module": "Wadi Farm",
+  "name": "WFM Visitor Log",
+  "naming_rule": "Random",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1,
+      "export": 1,
+      "import": 1
+    },
+    {
+      "role": "Farm Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "Farm Auditor",
+      "read": 1,
+      "report": 1,
+      "export": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1,
+  "links": [],
+  "title_field": "visitor_name",
+  "quick_entry": 0,
+  "custom": 0
+}

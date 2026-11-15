@@ -1,0 +1,135 @@
+{
+  "actions": [],
+  "allow_import": 1,
+  "autoname": "hash",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "company",
+    "farm",
+    "status",
+    "channel",
+    "observed_at",
+    "numeric_value",
+    "unit",
+    "source_event_id",
+    "deduplication_key",
+    "quality"
+  ],
+  "fields": [
+    {
+      "fieldname": "company",
+      "fieldtype": "Link",
+      "label": "Company",
+      "reqd": 1,
+      "options": "Company",
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "farm",
+      "fieldtype": "Link",
+      "label": "Farm",
+      "reqd": 1,
+      "options": "WFM Farm",
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "default": "Active",
+      "options": "Draft\nActive\nPaused\nCompleted\nClosed\nCancelled",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "channel",
+      "fieldtype": "Link",
+      "label": "Channel",
+      "reqd": 1,
+      "options": "WFM Device Channel"
+    },
+    {
+      "fieldname": "observed_at",
+      "fieldtype": "Datetime",
+      "label": "Observed At",
+      "reqd": 1
+    },
+    {
+      "fieldname": "numeric_value",
+      "fieldtype": "Float",
+      "label": "Numeric Value",
+      "reqd": 1
+    },
+    {
+      "fieldname": "unit",
+      "fieldtype": "Data",
+      "label": "Unit"
+    },
+    {
+      "fieldname": "source_event_id",
+      "fieldtype": "Data",
+      "label": "Source Event Id"
+    },
+    {
+      "fieldname": "deduplication_key",
+      "fieldtype": "Data",
+      "label": "Deduplication Key",
+      "unique": 1
+    },
+    {
+      "fieldname": "quality",
+      "fieldtype": "Select",
+      "label": "Quality",
+      "default": "Valid",
+      "options": "Valid\nSuspect\nRejected"
+    }
+  ],
+  "is_submittable": 0,
+  "module": "Wadi Farm",
+  "name": "WFM Telemetry Observation",
+  "naming_rule": "Random",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1,
+      "export": 1,
+      "import": 1
+    },
+    {
+      "role": "Farm Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "Farm Auditor",
+      "read": 1,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "Farm Technician",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1
+    },
+    {
+      "role": "Farm Integrator",
+      "read": 1,
+      "create": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1,
+  "links": [],
+  "title_field": "channel",
+  "quick_entry": 0,
+  "custom": 0
+}

@@ -1,0 +1,131 @@
+{
+  "actions": [],
+  "allow_import": 1,
+  "autoname": "hash",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "company",
+    "farm",
+    "status",
+    "source",
+    "observed_at",
+    "temperature_c",
+    "humidity_percent",
+    "wind_m_s",
+    "rainfall_mm",
+    "eto_mm",
+    "source_record_id"
+  ],
+  "fields": [
+    {
+      "fieldname": "company",
+      "fieldtype": "Link",
+      "label": "Company",
+      "reqd": 1,
+      "options": "Company",
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "farm",
+      "fieldtype": "Link",
+      "label": "Farm",
+      "reqd": 1,
+      "options": "WFM Farm",
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "default": "Active",
+      "options": "Draft\nActive\nPaused\nCompleted\nClosed\nCancelled",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "source",
+      "fieldtype": "Link",
+      "label": "Source",
+      "options": "WFM Integration Source"
+    },
+    {
+      "fieldname": "observed_at",
+      "fieldtype": "Datetime",
+      "label": "Observed At",
+      "reqd": 1
+    },
+    {
+      "fieldname": "temperature_c",
+      "fieldtype": "Float",
+      "label": "Temperature C"
+    },
+    {
+      "fieldname": "humidity_percent",
+      "fieldtype": "Float",
+      "label": "Humidity Percent"
+    },
+    {
+      "fieldname": "wind_m_s",
+      "fieldtype": "Float",
+      "label": "Wind M S"
+    },
+    {
+      "fieldname": "rainfall_mm",
+      "fieldtype": "Float",
+      "label": "Rainfall Mm"
+    },
+    {
+      "fieldname": "eto_mm",
+      "fieldtype": "Float",
+      "label": "Eto Mm"
+    },
+    {
+      "fieldname": "source_record_id",
+      "fieldtype": "Data",
+      "label": "Source Record Id"
+    }
+  ],
+  "is_submittable": 0,
+  "module": "Wadi Farm",
+  "name": "WFM Weather Observation",
+  "naming_rule": "Random",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1,
+      "export": 1,
+      "import": 1
+    },
+    {
+      "role": "Farm Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "Farm Auditor",
+      "read": 1,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "Farm Technician",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1,
+  "links": [],
+  "title_field": "source_record_id",
+  "quick_entry": 0,
+  "custom": 0
+}

@@ -1,0 +1,130 @@
+{
+  "actions": [],
+  "allow_import": 1,
+  "autoname": "hash",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "company",
+    "farm",
+    "status",
+    "network",
+    "component_code",
+    "component_type",
+    "manufacturer",
+    "serial_number",
+    "asset"
+  ],
+  "fields": [
+    {
+      "fieldname": "company",
+      "fieldtype": "Link",
+      "label": "Company",
+      "reqd": 1,
+      "options": "Company",
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "farm",
+      "fieldtype": "Link",
+      "label": "Farm",
+      "reqd": 1,
+      "options": "WFM Farm",
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "default": "Active",
+      "options": "Draft\nActive\nPaused\nCompleted\nClosed\nCancelled",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "network",
+      "fieldtype": "Link",
+      "label": "Network",
+      "reqd": 1,
+      "options": "WFM Irrigation Network"
+    },
+    {
+      "fieldname": "component_code",
+      "fieldtype": "Data",
+      "label": "Component Code",
+      "reqd": 1
+    },
+    {
+      "fieldname": "component_type",
+      "fieldtype": "Select",
+      "label": "Component Type",
+      "reqd": 1,
+      "options": "Valve\nPump\nFilter\nPipe\nSprinkler\nSensor\nOther"
+    },
+    {
+      "fieldname": "manufacturer",
+      "fieldtype": "Data",
+      "label": "Manufacturer"
+    },
+    {
+      "fieldname": "serial_number",
+      "fieldtype": "Data",
+      "label": "Serial Number"
+    },
+    {
+      "fieldname": "asset",
+      "fieldtype": "Link",
+      "label": "Asset",
+      "options": "Asset"
+    }
+  ],
+  "is_submittable": 0,
+  "module": "Wadi Farm",
+  "name": "WFM Irrigation Component",
+  "naming_rule": "Random",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1,
+      "export": 1,
+      "import": 1
+    },
+    {
+      "role": "Farm Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "Farm Auditor",
+      "read": 1,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "Farm Technician",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1
+    },
+    {
+      "role": "Farm Supervisor",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1,
+  "links": [],
+  "title_field": "component_code",
+  "quick_entry": 0,
+  "custom": 0
+}

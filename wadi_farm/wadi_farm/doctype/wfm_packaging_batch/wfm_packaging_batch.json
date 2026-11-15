@@ -1,0 +1,124 @@
+{
+  "actions": [],
+  "allow_import": 1,
+  "autoname": "hash",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "company",
+    "farm",
+    "status",
+    "source_batch",
+    "finished_batch",
+    "packed_at",
+    "item",
+    "quantity_kg",
+    "stock_entry"
+  ],
+  "fields": [
+    {
+      "fieldname": "company",
+      "fieldtype": "Link",
+      "label": "Company",
+      "reqd": 1,
+      "options": "Company",
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "farm",
+      "fieldtype": "Link",
+      "label": "Farm",
+      "reqd": 1,
+      "options": "WFM Farm",
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "default": "Active",
+      "options": "Draft\nActive\nPaused\nCompleted\nClosed\nCancelled",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "source_batch",
+      "fieldtype": "Link",
+      "label": "Source Batch",
+      "options": "Batch"
+    },
+    {
+      "fieldname": "finished_batch",
+      "fieldtype": "Link",
+      "label": "Finished Batch",
+      "options": "Batch"
+    },
+    {
+      "fieldname": "packed_at",
+      "fieldtype": "Datetime",
+      "label": "Packed At",
+      "reqd": 1
+    },
+    {
+      "fieldname": "item",
+      "fieldtype": "Link",
+      "label": "Item",
+      "reqd": 1,
+      "options": "Item"
+    },
+    {
+      "fieldname": "quantity_kg",
+      "fieldtype": "Float",
+      "label": "Quantity Kg",
+      "reqd": 1
+    },
+    {
+      "fieldname": "stock_entry",
+      "fieldtype": "Link",
+      "label": "Stock Entry",
+      "options": "Stock Entry"
+    }
+  ],
+  "is_submittable": 0,
+  "module": "Wadi Farm",
+  "name": "WFM Packaging Batch",
+  "naming_rule": "Random",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1,
+      "export": 1,
+      "import": 1
+    },
+    {
+      "role": "Farm Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "Farm Auditor",
+      "read": 1,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "Farm Supervisor",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1,
+  "links": [],
+  "title_field": "item",
+  "quick_entry": 0,
+  "custom": 0
+}

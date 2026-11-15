@@ -1,0 +1,114 @@
+{
+  "actions": [],
+  "allow_import": 1,
+  "autoname": "hash",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "company",
+    "farm",
+    "status",
+    "policy",
+    "incident",
+    "claimed_on",
+    "claimed_amount",
+    "received_amount",
+    "claim_reference"
+  ],
+  "fields": [
+    {
+      "fieldname": "company",
+      "fieldtype": "Link",
+      "label": "Company",
+      "reqd": 1,
+      "options": "Company",
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "farm",
+      "fieldtype": "Link",
+      "label": "Farm",
+      "reqd": 1,
+      "options": "WFM Farm",
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "default": "Active",
+      "options": "Draft\nActive\nPaused\nCompleted\nClosed\nCancelled",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "policy",
+      "fieldtype": "Link",
+      "label": "Policy",
+      "reqd": 1,
+      "options": "WFM Insurance Policy"
+    },
+    {
+      "fieldname": "incident",
+      "fieldtype": "Link",
+      "label": "Incident",
+      "options": "WFM Emergency Incident"
+    },
+    {
+      "fieldname": "claimed_on",
+      "fieldtype": "Date",
+      "label": "Claimed On",
+      "reqd": 1
+    },
+    {
+      "fieldname": "claimed_amount",
+      "fieldtype": "Float",
+      "label": "Claimed Amount"
+    },
+    {
+      "fieldname": "received_amount",
+      "fieldtype": "Float",
+      "label": "Received Amount"
+    },
+    {
+      "fieldname": "claim_reference",
+      "fieldtype": "Data",
+      "label": "Claim Reference"
+    }
+  ],
+  "is_submittable": 0,
+  "module": "Wadi Farm",
+  "name": "WFM Insurance Claim",
+  "naming_rule": "Random",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1,
+      "export": 1,
+      "import": 1
+    },
+    {
+      "role": "Farm Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "Farm Auditor",
+      "read": 1,
+      "report": 1,
+      "export": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1,
+  "links": [],
+  "title_field": "claim_reference",
+  "quick_entry": 0,
+  "custom": 0
+}
